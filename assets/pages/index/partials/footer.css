@@ -1,0 +1,8 @@
+footer p{
+    text-align: center;
+    background: var(--cor-vermelho);
+    font-family: var(--bold);
+    padding:20px;
+    color: var(--cor-branco);
+    font-size: 0.9rem;
+}

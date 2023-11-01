@@ -1,0 +1,154 @@
+section.compra{
+    display: flex;
+    justify-content: center;
+    position:relative; 
+    overflow: hidden; 
+    padding: 80px 0;
+    
+}
+
+section.compra .icon img{
+    max-width: 300px;
+    width:100%
+}
+section.compra .conteudo{
+    max-width: 450px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 50px 40px; /*DISTANCIEI ELE DO ICONE E COLOQUEI ELE MAIS PRO MEIO */
+    
+    
+}
+section.compra .conteudo h3 {
+    color:var(--cor-branco);
+    font-family: var(--bold);
+    font-size: 2.0rem;
+   
+}
+
+section.compra .conteudo h3 span {
+    color:var(--cor-verde);
+    font-family: var(--bold);
+}
+
+section.compra .conteudo p {
+    color:var(--cor-branco);
+    font-family: var(--regular);
+    line-height: 1.5;
+    margin:20px 0; /*ESTOU DISTANCIANDO O "P" DE TODOS*/
+}
+
+section.compra .conteudo a{
+    padding: 15px 50px;
+    background-color: var(--cor-verde);
+    text-decoration: none;
+    font-size: 1rem;
+    color: var(--cor-branco);
+    text-align: center;
+    font-family: var(--bold);
+    border-radius: 50px;
+    transition: all 0.3s;
+    z-index: 2;
+    box-shadow: 
+    0 0 10px var(--cor-verde),
+    0 0 25px var(--cor-verde);
+   
+   
+    
+}
+
+section.compra img.circulo{
+    position: absolute; /*ESSAs IMAGEMs SÃO ABSOLUTAS, FICA EM CIMA DE TUDO*/
+    z-index: 1;
+    animation: girarCirculo 30s linear infinite;
+    bottom:-500px;
+    right: -550px;
+    opacity: 0.5;
+}
+    /*30 seg para ternminar uma volta, linear = algo fluido e rodar infinitament*/
+
+
+@keyframes girarCirculo{ /*CRIAR ANIMAÇÃO*/
+    /*NESSA ANIMAÇÃO A IAMGEM GIRA UM 360 GRAUS*/
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(300deg);
+    }
+}
+
+/*responsivo*/
+@media screen and (max-width:1000px){
+
+    section.compra{
+        display: flex;
+        flex-direction: column;
+        padding: 50px 0 20px 0;
+        align-items: center;
+        
+    }
+    
+    section.compra .icon img{
+        max-width: 200px;
+        width:100%
+    }
+    section.compra .conteudo{
+        max-width: 450px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 40px 40px; /*DISTANCIEI ELE DO ICONE E COLOQUEI ELE MAIS PRO MEIO */
+        text-align: center;
+        
+        
+    }
+    section.compra .conteudo h3 {
+        color:var(--cor-branco);
+        font-family: var(--bold);
+        font-size: 2.0rem;
+       
+    }
+    
+    section.compra .conteudo h3 span {
+        color:var(--cor-verde);
+        font-family: var(--bold);
+    }
+    
+    section.compra .conteudo p {
+        color:var(--cor-branco);
+        font-family: var(--regular);
+        line-height: 1.5;
+        margin:20px 0; /*ESTOU DISTANCIANDO O "P" DE TODOS*/
+    }
+    
+    section.compra .conteudo a{
+        padding: 15px 50px;
+        background-color: var(--cor-verde);
+        text-decoration: none;
+        font-size: 1rem;
+        color: var(--cor-branco);
+        text-align: center;
+        font-family: var(--bold);
+        border-radius: 50px;
+        transition: all 0.3s;
+        z-index: 2;
+        box-shadow: 
+        0 0 10px var(--cor-verde),
+        0 0 25px var(--cor-verde);
+       
+        
+    }
+    
+    section.compra img.circulo{
+
+        bottom:-700px;
+        right: -750px;
+        opacity: 0.5;
+    }
+
+    }
+  

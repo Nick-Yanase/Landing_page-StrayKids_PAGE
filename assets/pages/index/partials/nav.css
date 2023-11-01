@@ -1,0 +1,75 @@
+nav{
+    background-color: #090d175b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding:0px 60px;
+    position:fixed;
+    top:0;
+    left:0; /*Para elle sempre começar do canto da tela pra n sobrar margem branca*/
+    z-index: 3;
+    backdrop-filter: blur(20px); /*DEIXAR A NAV BAR BORRADA*/
+   -webkit-backdrop-filter: blur(20px);
+}
+nav img.logo{
+    max-width: 80px;
+    width:100%;
+    
+}
+nav h2.logo{
+    font-family: var(--bold);
+    color: var(--cor-branco);
+    font-size: 1.3rem;
+    letter-spacing:10px;
+}
+
+nav .menu a{
+    font-family: var(--regular);
+    color: var(--cor-branco);
+    font-size: 0.9rem;
+    text-decoration: none;
+    margin: 0px 0px 0px 25px; 
+    transition: all 0.3s;
+}
+
+nav .menu a:hover{
+    opacity:0.5;
+}
+
+nav .menu a.destaque{
+    font-family: var(--bold);
+    color: var(--cor-vermelho);
+}
+
+/* RESPONSIVO para cell */
+@media screen and (max-width:1000px){
+    
+nav{
+   
+    padding:0 40px;
+   
+}
+nav img.logo{
+    max-width: 50px;
+    width:100%;
+    
+}
+
+nav h2.logo{
+    font-family: var(--bold);
+    color: var(--cor-branco);
+    font-size: 1.3rem;
+    letter-spacing:10px;
+}
+
+nav .menu a{
+    display:none; /*PARA APAGAR OS MENUS */
+    
+}
+
+nav .menu a.destaque{
+    display: flex; /*Aparecer so o DESTAQUE*/
+}
+
+}

@@ -1,0 +1,123 @@
+section.topo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 80px 30px 80px; /*TAMANHO DE OCUPAÇÃO DA SECTION COM OS ELEMENTOS*/
+    position:relative; /*ESTAMOS PRENDENDO A IMAGEM DO CIRCULO NESTA SECTION, PQ SENAO ELA PODE SAIR DO LUGAR*/
+    overflow: hidden;/*ELE LIMITA O FIM DA SECTION, FAZENDO COM QUE A IAMGEM FIQUE CORTADA*/
+}
+
+section.topo img{
+    position: absolute; /*ESSAs IMAGEMs SÃO ABSOLUTAS, FICA EM CIMA DE TUDO*/
+    z-index: 1;
+    animation: girarCirculo 30s linear infinite;
+    /*30 seg para ternminar uma volta, linear = algo fluido e rodar infinitament*/
+}
+
+@keyframes girarCirculo{ /*CRIAR ANIMAÇÃO*/
+    /*NESSA ANIMAÇÃO A IAMGEM GIRA UM 360 GRAUS*/
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(300deg);
+    }
+}
+
+section.topo img.circulo01{
+    top:-600px;
+    left: -450px;
+}
+
+section.topo img.circulo02{
+    bottom:-500px;
+    right: -350px;
+    opacity: 0.5;
+}
+
+section.topo h1{
+    font-family: var(--bold);
+    font-size:2rem;
+    color:var(--cor-branco);
+    width:100%;
+    max-width: 650px;
+    text-align: center;
+    line-height: 1.2;
+    z-index: 2;
+}
+
+section.topo h1 span{
+    color:var(--cor-vermelho);
+}
+
+section.topo iframe{
+    padding:30px 0px;
+    max-width: 100%;
+    width: 700px;
+    height: 440px;
+    border-radius: 40px;
+    z-index: 2;
+}
+
+section.topo a.buttom-topo{
+    padding: 15px 50px;
+    background-color: var(--cor-vermelho);
+    text-decoration: none;
+    font-size: 1rem;
+    color: var(--cor-branco);
+    font-family: var(--bold);
+    border-radius: 50px;
+    transition: all 0.3s;
+    z-index: 2;
+    box-shadow: /*DEIXAR O BOTÃO BRILHANTE*/
+    0 0 10px var(--cor-vermelho),
+    0 0 25px var(--cor-vermelho)
+    ;
+    
+}
+section.topo a:hover{
+    background-color: var(--cor-branco);
+    color: var(--cor-vermelho);
+}
+
+/* RESPONSIVO para cell */
+@media screen and (max-width:1000px){
+    section.topo{
+       
+        padding: 100px 20px 60px 20px; /*TAMANHO DE OCUPAÇÃO DA SECTION COM OS ELEMENTOS*/
+    }
+ 
+    section.topo img.circulo01{
+        top:-750px;
+        left: -600px;
+    }
+    
+    section.topo img.circulo02{
+        bottom:-700px;
+        right: -600px;
+        opacity: 0.5;
+    }
+    
+    section.topo h1{
+        font-size:1.5rem;
+        line-height: 1.5;
+      
+    }
+    
+    section.topo h1 span{
+        color:var(--cor-vermelho);
+    }
+    
+    section.topo iframe{
+        width: 320px;
+        height: 240px;
+        border-radius: 35px;
+    }
+    
+}
+
+
+
+
+
