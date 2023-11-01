@@ -1,3 +1,4 @@
+@import'/assets/global/global.css';
 section.topo{
     display: flex;
     flex-direction: column;
